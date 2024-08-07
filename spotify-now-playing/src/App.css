@@ -1,0 +1,115 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main content container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  padding: 20px;
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Now playing container */
+.now-playing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Now playing text */
+.now-playing-text {
+  text-align: center;
+}
+
+/* Album cover */
+.album-cover {
+  width: 100%;
+  max-width: 300px; /* Adjust to fit within the text width */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 10px 2px rgba(128, 0, 128, 0.5); /* Soft purple glow */
+}
+
+/* Track details */
+.track-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align details on mobile */
+  gap: 10px;
+  text-align: center; /* Center-align text on mobile */
+}
+
+/* Track name */
+.track-details h1 {
+  font-size: 1.5em; /* Adjust for mobile */
+  margin: 0;
+  color: #fff;
+}
+
+/* Track details paragraph */
+.track-details p {
+  margin: 0;
+  font-size: 1em; /* Adjust for mobile */
+}
+
+/* Link styles */
+.song-link, .artist-link, .album-link {
+  color: #1DB954; /* Spotify green */
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.song-link:hover, .artist-link:hover, .album-link:hover {
+  color: #1ED760; /* Lighter Spotify green */
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  .track-details h1 {
+    font-size: 1.2em; /* Smaller font size on mobile */
+  }
+
+  .track-details p {
+    font-size: 0.9em; /* Smaller font size on mobile */
+  }
+
+  .album-cover {
+    max-width: 80%; /* Make album cover image fit within screen width */
+  }
+}
